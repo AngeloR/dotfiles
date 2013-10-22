@@ -5,6 +5,9 @@ autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+"TagBar
+nmap <F8> :TagbarToggle<CR>
+
 "functionality
 set hlsearch
 set ignorecase
@@ -22,3 +25,7 @@ set ruler
 set autoindent
 syntax on
 filetype plugin indent on
+color darkblue
+
+"shortcuts
+cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
