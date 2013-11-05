@@ -16,6 +16,7 @@ set laststatus=2
 set number
 set swapfile
 set dir=~/tmp
+set colorcolumn=80
 
 "code display
 set tabstop=4
