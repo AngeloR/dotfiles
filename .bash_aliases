@@ -104,3 +104,8 @@ export PS1='$(git branch &>/dev/null;\
 # @2 - Prompt when not in GIT repo
         echo " '$Yellow$PathShort$Color_Off'\$ "; \
             fi)'
+
+
+# set encoding!
+export LC_ALL=en_US.utf-8
+export LANG="$LC_ALL"
