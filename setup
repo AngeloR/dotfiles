@@ -3,9 +3,6 @@
 # create tmp folder for vim swp
 mkdir ~/tmp
 
-# install tmux
-apt-get install vim tmux
-
 # install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle;
 
