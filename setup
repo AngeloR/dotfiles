@@ -13,6 +13,10 @@ https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 
+# install NERDTreeTabs
+cd ~/.vim/bundle
+git clone https://github.com/jistr/vim-nerdtree-tabs.git
+
 # link the files
 cd ~
 ln -s ~/personal/dotfiles/.vimrc .
