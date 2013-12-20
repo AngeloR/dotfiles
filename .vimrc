@@ -14,6 +14,9 @@ map nt :NERDTreeTabsToggle<Enter>
 "TagBar
 nmap <F8> :TagbarToggle<CR>
 
+"ctrlp - for fuzzy search
+set runtimepath^=~/.vim/bundle/ctrlp/ctrlp.vim
+
 "functionality
 set hlsearch
 set ignorecase
