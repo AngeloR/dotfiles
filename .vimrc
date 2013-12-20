@@ -8,6 +8,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "NERDTreeTabs
 map nt :NERDTreeTabsToggle<Enter>
 
+"autotag
+:so ~/.vim/bundle/AutoTag/plugin/autotag.vim
+
 "TagBar
 nmap <F8> :TagbarToggle<CR>
 
