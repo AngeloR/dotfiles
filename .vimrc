@@ -26,6 +26,7 @@ set number
 set swapfile
 set dir=~/tmp
 set colorcolumn=80
+set t_Co=256
 
 "code display
 set tabstop=4
@@ -35,8 +36,14 @@ set ruler
 set autoindent
 syntax on
 filetype plugin indent on
-color darkblue
+color desert
 
 "shortcuts
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('Q'):('Q'))
+
+"gvim nonsense
+:set guioptions-=m "remove menubar
+:set guioptions-=T "remove toolbar
+:set guioptions-=r "remove right scrollbar
+:set guioptions-=L "remove left scrollbar
