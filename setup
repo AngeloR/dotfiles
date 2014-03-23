@@ -1,11 +1,13 @@
 #!/bin/bash
 
-# create tmp folder for vim swp
+# create vim folders
 mkdir ~/tmp
-
-# install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle;
 
+# copy our colors dir in
+cp -R ./colors ~/.vim/
+
+# install pathogen
 curl -Sso ~/.vim/autoload/pathogen.vim \
 https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
@@ -29,8 +31,30 @@ git clone https://github.com/vim-scripts/AutoTag.git
 cd ~/.vim/bundle
 git clone https://github.com/kien/ctrlp.vim.git ctrlp/ctrlp.vim
 
+# install syntastic
+cd ~/.vim/bundle
+git clone https://github.com/scrooloose/syntastic.git
+
+# install delimitMat - auto-insert quotes,params,brackets
+cd ~/.vim/bundle
+git clone https://github.com/Raimondi/delimitMate.git
+
+# install YouCompleteMe, best fucking thing on the planet
+cd ~/.vim/bundle
+git clone https://github.com/Valloric/YouCompleteMe.git
+cd YouCompleteMe
+git submodule update --init --recursive
+
 # link the files
 cd ~
 ln -s ~/personal/dotfiles/.vimrc .
 ln -s ~/personal/dotfiles/.tmux.conf .
 ln -s ~/personal/dotfiles/.bash_aliases .
+
+# install color themes
+cd ~/personal/
+mkdir vim-colors
+cd !$
+git clone https://github.com/Lokaltog/vim-distinguished.git
+cd ~/.vim/colors
+ln -s ~/personal/vim-colors/vim-distinguished/colors/distinguished.vim .
