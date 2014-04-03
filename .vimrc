@@ -13,7 +13,7 @@ map nt :NERDTreeTabsToggle<Enter>
 :so ~/.vim/bundle/AutoTag/plugin/autotag.vim
 
 "TagBar
-nmap <F8> :TagbarToggle<CR>
+nmap <F8> :TagbarToggle<CR> :TagbarTogglePause<CR>
 
 "ctrlp - for fuzzy search
 set runtimepath^=~/.vim/bundle/ctrlp/ctrlp.vim
@@ -42,6 +42,11 @@ color wombat
 "shortcuts
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('Q'):('Q'))
+
+"powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 "gvim nonsense
 :set guioptions-=m "remove menubar
