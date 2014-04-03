@@ -4,6 +4,7 @@ execute pathogen#infect()
 autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:NERDTreeDirArrows=0
 
 "NERDTreeTabs
 map nt :NERDTreeTabsToggle<Enter>
