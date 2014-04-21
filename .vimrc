@@ -37,7 +37,8 @@ set ruler
 set autoindent
 syntax on
 filetype plugin indent on
-color wombat
+set background=dark
+colorscheme solarized
 
 "shortcuts
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
