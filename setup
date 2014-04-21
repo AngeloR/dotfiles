@@ -11,6 +11,9 @@ cp -R ./colors ~/.vim/
 curl -Sso ~/.vim/autoload/pathogen.vim \
 https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
+# install airline
+git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
+
 # install NERDTree
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
@@ -54,6 +57,8 @@ cd ~
 ln -s ~/personal/dotfiles/.vimrc .
 ln -s ~/personal/dotfiles/.tmux.conf .
 ln -s ~/personal/dotfiles/.bash_aliases .
+rm ~/.zshrc
+ln -s ~/personal/dotfiles/.zshrc .
 
 # install color themes
 cd ~/personal/
