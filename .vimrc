@@ -43,13 +43,11 @@ color wombat
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('Q'):('Q'))
 
-"powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-
 "gvim nonsense
 :set guioptions-=m "remove menubar
 :set guioptions-=T "remove toolbar
 :set guioptions-=r "remove right scrollbar
 :set guioptions-=L "remove left scrollbar
+
+"remap esc
+inoremap jj <ESC>
