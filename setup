@@ -55,10 +55,7 @@ git submodule update --init --recursive
 # link the files
 cd ~
 ln -s ~/personal/dotfiles/.vimrc .
-ln -s ~/personal/dotfiles/.tmux.conf .
 ln -s ~/personal/dotfiles/.bash_aliases .
-rm ~/.zshrc
-ln -s ~/personal/dotfiles/.zshrc .
 
 # install color themes
 cd ~/.vim/bundle
@@ -70,3 +67,5 @@ mkdir vim-colors
 cd ~/.vim/colors
 wget https://raw.githubusercontent.com/tomasr/dotfiles/master/.vim/colors/wombat.vim
 
+# Setup tmux
+./tmux/tmux-setup.sh
