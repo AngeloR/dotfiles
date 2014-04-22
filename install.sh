@@ -1,1 +1,1 @@
-apt-get install git tmux xclip zsh
+apt-get install git tmux xclip
