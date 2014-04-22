@@ -61,8 +61,11 @@ rm ~/.zshrc
 ln -s ~/personal/dotfiles/.zshrc .
 
 # install color themes
+cd ~/.vim/bundle
+git clone git://github.com/altercation/vim-colors-solarized.git
 ~/personal/dotfiles/solarize.sh dark
 
+cd ~/.vim
 mkdir vim-colors
 cd ~/.vim/colors
 wget https://raw.githubusercontent.com/tomasr/dotfiles/master/.vim/colors/wombat.vim

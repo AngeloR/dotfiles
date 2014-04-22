@@ -1,13 +1,12 @@
 execute pathogen#infect()
 
 "NERDTree
-autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:NERDTreeDirArrows=0
 
 "NERDTreeTabs
-map nt :NERDTreeTabsToggle<Enter>
+map nnt :NERDTreeTabsToggle<Enter>
 
 "autotag
 :so ~/.vim/bundle/AutoTag/plugin/autotag.vim
@@ -28,6 +27,9 @@ set swapfile
 set dir=~/tmp
 set colorcolumn=80
 set t_Co=256
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=dark
 
 "code display
 set tabstop=4
@@ -37,8 +39,6 @@ set ruler
 set autoindent
 syntax on
 filetype plugin indent on
-set background=dark
-colorscheme solarized
 
 "shortcuts
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
