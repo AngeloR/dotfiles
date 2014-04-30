@@ -3,3 +3,5 @@ export TERM="screen-256color"
 
 PROMPT_COMMAND='DIR=`pwd|sed -e "s!$HOME!~!"`; if [ ${#DIR} -gt 30 ]; then CurDir=${DIR:0:12}...${DIR:${#DIR}-15}; else CurDir=$DIR; fi'
 PS1="[\$CurDir] \$ "
+
+alias glog='git log --pretty=format:"%C(red)%h %C(blue)%an %Creset%ar: %C(yellow)%s"'
