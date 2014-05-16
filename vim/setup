@@ -4,11 +4,8 @@
 mkdir ~/tmp
 mkdir -p ~/.vim/autoload ~/.vim/bundle;
 
-# copy our colors dir in
-cp -R ./colors ~/.vim/
-
 # install pathogen
-curl -Sso ~/.vim/autoload/pathogen.vim \
+curl -LSso ~/.vim/autoload/pathogen.vim \
 https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 # install airline
@@ -52,10 +49,6 @@ git clone https://github.com/Valloric/YouCompleteMe.git
 cd YouCompleteMe
 git submodule update --init --recursive
 
-# link the files
-cd ~
-ln -s ~/personal/dotfiles/.vimrc .
-
 # install color themes
 cd ~/.vim/bundle
 git clone git://github.com/altercation/vim-colors-solarized.git
@@ -66,8 +59,6 @@ mkdir vim-colors
 cd ~/.vim/colors
 wget https://raw.githubusercontent.com/tomasr/dotfiles/master/.vim/colors/wombat.vim
 
-# Setup bash
-./bash/bash-setup.sh
-
-# Setup tmux
-./tmux/tmux-setup.sh
+# link the files
+cd ~
+ln -s ~/personal/dotfiles/vim/.vimrc .

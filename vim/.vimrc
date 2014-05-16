@@ -28,7 +28,6 @@ set dir=~/tmp
 set colorcolumn=80
 set t_Co=256
 let g:solarized_termcolors=256
-colorscheme solarized
 set background=dark
 
 "code display
