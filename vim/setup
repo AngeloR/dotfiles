@@ -23,6 +23,10 @@ git clone https://github.com/jistr/vim-nerdtree-tabs.git
 cd ~/.vim/bundle
 git clone git://github.com/majutsushi/tagbar
 
+# install tabLine
+cd ~/.vim/bundle
+git clone git://github.com/mkitt/tabline.vim.git
+
 # install AutoTag
 cd ~/.vim/bundle
 git clone https://github.com/vim-scripts/AutoTag.git
