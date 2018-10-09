@@ -23,18 +23,6 @@ git clone https://github.com/jistr/vim-nerdtree-tabs.git
 cd ~/.vim/bundle
 git clone git://github.com/airblade/vim-gitgutter.git
 
-# install tagbar
-cd ~/.vim/bundle
-git clone git://github.com/majutsushi/tagbar
-
-# install tabLine
-cd ~/.vim/bundle
-git clone git://github.com/mkitt/tabline.vim.git
-
-# install AutoTag
-cd ~/.vim/bundle
-git clone https://github.com/vim-scripts/AutoTag.git
-
 # relative numbering switcher
 cd ~/.vim/bundle
 git clone https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
@@ -56,16 +44,6 @@ cd ~/.vim/bundle
 git clone https://github.com/Valloric/YouCompleteMe.git
 cd YouCompleteMe
 git submodule update --init --recursive
-
-# install color themes
-cd ~/.vim/bundle
-git clone git://github.com/altercation/vim-colors-solarized.git
-~/personal/dotfiles/solarize.sh dark
-
-cd ~/.vim
-mkdir vim-colors
-cd ~/.vim/colors
-wget https://raw.githubusercontent.com/tomasr/dotfiles/master/.vim/colors/wombat.vim
 
 # link the files
 cd ~
