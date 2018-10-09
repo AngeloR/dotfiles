@@ -18,7 +18,7 @@ set smartcase
 set laststatus=2
 set number
 set swapfile
-set dir=~/tmp
+set dir=/tmp
 set colorcolumn=80
 set t_Co=256
 let g:solarized_termcolors=256
