@@ -8,12 +8,6 @@ let g:NERDTreeDirArrows=0
 "NERDTreeTabs
 map nnt :NERDTreeTabsToggle<Enter>
 
-"autotag
-:so ~/.vim/bundle/AutoTag/plugin/autotag.vim
-
-"TagBar
-nmap <F8> :TagbarToggle<CR> :TagbarTogglePause<CR>
-
 "ctrlp - for fuzzy search
 set runtimepath^=~/.vim/bundle/ctrlp/ctrlp.vim
 
@@ -41,7 +35,7 @@ filetype plugin indent on
 
 "shortcuts
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
-cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('Q'):('Q'))
+cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('q'):('Q'))
 
 "gvim nonsense
 :set guioptions-=m "remove menubar
